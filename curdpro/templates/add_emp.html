@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% include 'cdnlines.html' %}
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    input[name]{
+      margin-top:10px;
+    }
+  </style>
+  <body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="offset-md-4 col-md-4">
+        <h4>Please Enter Your Details Here!!!</h4>
+        <form method="post">
+          {% csrf_token %}
+        <input type="text" name="fname" class="form-control" placeholder="First Name...">
+        <input type="text" name="lname" class="form-control" placeholder="Last Name...">
+        <input type="email" name="email" class="form-control" placeholder="Email...">
+        <input type="number" name="exp" class="form-control" placeholder="Experience...">
+        <input type="text" name="skill" class="form-control" placeholder="Skill...">
+        <input type="number" name="mobile" class="form-control" placeholder="Mobile...">
+        <input type="text" name="company" class="form-control" placeholder="Company...">
+        <input type="text" name="location" class="form-control" placeholder="Location...">
+        <div class="text-center mt-2">
+          <input type="Submit" value="Submit" class="btn btn-success">
+          <input type="reset" value="Clear" class="btn btn-danger">
+        </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
